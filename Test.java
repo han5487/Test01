@@ -15,7 +15,6 @@ import com.itextpdf.layout.element.Text;
 import com.itextpdf.layout.property.TextAlignment;
 import com.itextpdf.layout.property.UnitValue;
 
-//
 import com.itextpdf.layout.element.List;
 import com.itextpdf.layout.element.ListItem;
 import com.itextpdf.layout.property.ListNumberingType;
@@ -26,7 +25,7 @@ import com.itextpdf.layout.property.ListNumberingType;
 public class Test {
 
 	public static void main(String[] args) {
-		createPdf("F:\\司資料\\Test\\test.pdf");
+		createPdf("F:\\司資料\\Test\\本票.pdf");
 	}
 
 	public static void createPdf(String dest) {
@@ -129,7 +128,8 @@ public class Test {
 			list1 = new List().setListSymbol(ListNumberingType.DECIMAL).setFont(baseFont);// 有序列表
 			list1.add(new ListItem("第三條違約金之計算基準：").setListSymbol(new Text("四、")));
 			list1.add(new ListItem("１.借款期間未屆至者，本金自應還款日起、利息自應繳息日起，依當期應攤還本金或當期應繳利息金額計付。").setListSymbol(""));
-			list1.add(new ListItem("２.借款期間屆至或經 貴行主張加速條款視為到期者，自借款到期日或視為到期經列報逾期放款日（以孰先屆至為準）起，依未償還本金餘額計付。").setListSymbol(""));
+			list1.add(new ListItem("２.借款期間屆至或經 貴行主張加速條款視為到期者，自借款到期日或視為到期經列報逾期放款日（以孰先屆至為準）起，依未償還本金餘額計付。")
+					.setListSymbol(""));
 			cell = new Cell(1, 50).add(list1);
 			table.addCell(cell);
 
